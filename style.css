@@ -8,17 +8,18 @@ body {
 
 #car {
   width: 200px;
+  transition: transform  .5s ease-in-out;
 }
 
-.rotate-90-left{
+.rotate-90-right{
   transform: rotate(90deg);
 }
-.rotate-90-right{
+.rotate-90-left{
   transform: rotate(-90deg);
-}
-.rotate-180-left{
-  transform: rotate(180deg);
 }
 .rotate-180-right{
   transform: rotate(180deg);
+}
+.rotate-180-left{
+  transform: rotate(-180deg);
 }

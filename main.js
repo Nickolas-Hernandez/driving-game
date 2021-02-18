@@ -5,8 +5,13 @@ var carData ={
 }
 
 function carController(event){
-  console.log('event', event );
-  console.log('event.target', event.target );
+  if(event.keyCode === 37){
+    if(carData.facing === 'right'){
+      $hotWheel.className = 'rotate-180-right';
+      carData.facing = 'left';
+    }
+  }
+  console.log('event', event);
 }
 
 window.addEventListener('keydown', carController);
