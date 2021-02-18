@@ -1,7 +1,11 @@
 var $hotWheel = document.querySelector('#car');
 
 var carData = {
-  facing: 'east'
+  facing: 'east',
+  location: {
+    top: 0,
+    right: 0
+  }
 };
 
 function carController(event) {
