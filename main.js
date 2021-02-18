@@ -9,6 +9,7 @@ var carData = {
 };
 
 function carController(event) {
+  console.log(event);
   if (event.keyCode === 37) {
     $hotWheel.className = 'rotate-180-left';
     carData.facing = 'west';
@@ -21,6 +22,8 @@ function carController(event) {
   } else if (event.keyCode === 40) {
     $hotWheel.className = 'rotate-90-right';
     carData.facing = 'south';
+  }else if(event.keyCode === 32){
+    setInterval(drive, 16);
   }
 }
 
