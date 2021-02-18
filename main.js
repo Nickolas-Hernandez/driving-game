@@ -1,7 +1,8 @@
 var $hotWheel = document.querySelector('#car');
 
 function carController(event){
-
+  console.log('event', event )
+  console.log('event.target', event.target )
 }
 
-$hotWheel.addEventListener('keydown', carController);
+window.addEventListener('keydown', carController);
