@@ -11,7 +11,9 @@ var carData = {
 };
 
 function drive() {
-  carData.location.left += 3;
+  if (carData.facing === 'east') {
+    carData.location.left += 3;
+  }
   $hotWheel.style.left = `${carData.location.left}px`;
 }
 
