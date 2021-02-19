@@ -12,13 +12,13 @@ var carData = {
 
 function drive() {
   if (carData.facing === 'east') {
-    carData.location.left += 3;
+    carData.location.left += 5;
   } else if (carData.facing === 'west') {
-    carData.location.left -= 3;
+    carData.location.left -= 5;
   } else if (carData.facing === 'north') {
-    carData.location.top -= 3;
+    carData.location.top -= 5;
   } else if (carData.facing === 'south') {
-    carData.location.top += 3;
+    carData.location.top += 5;
   }
   $hotWheel.style.top = `${carData.location.top}px`;
   $hotWheel.style.left = `${carData.location.left}px`;
