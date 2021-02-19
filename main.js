@@ -1,11 +1,13 @@
 var $hotWheel = document.querySelector('#car');
+var intervalID;
 
 var carData = {
   facing: 'east',
   location: {
     top: 0,
     left: 0
-  }
+  },
+  isDriving: false
 };
 
 function drive() {
@@ -27,7 +29,13 @@ function carController(event) {
     $hotWheel.className = 'rotate-90-right';
     carData.facing = 'south';
   } else if (event.keyCode === 32) {
-    setInterval(drive, 16);
+    if (carData.isDriving === false) {
+      intervalID = setInterval(drive, 16);
+      carData.isDriving = true;
+    } else {
+      clearInterval(intervalID);
+      carData.isDriving = false;
+    }
   }
 }
 
