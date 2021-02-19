@@ -5,7 +5,8 @@ var carData = {
   location: {
     top: 0,
     left: 0
-  }
+  },
+  isDriving: false
 };
 
 function drive() {
