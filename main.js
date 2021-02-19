@@ -4,9 +4,14 @@ var carData = {
   facing: 'east',
   location: {
     top: 0,
-    right: 0
+    left: 0
   }
 };
+
+function drive(){
+  carData.location.left += 3;
+  $hotWheel.style.left = `${carData.location.left}px`;
+}
 
 function carController(event) {
   console.log(event);
